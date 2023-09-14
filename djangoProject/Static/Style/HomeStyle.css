@@ -1,3 +1,58 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #01266c;
+}
+
 .navBar{
-    
+    height: 70px;
+    padding: 20px;
+    background-color: white;
+}
+
+.navBar .navBarLogo{
+    float: left;
+    height: 70px;
+}
+
+.navBar .Menu{
+    float: right;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.navBar .Menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #01266c;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: 10px;
+}
+
+.navBar .Menu img{
+    display: none;
+    height: 40px;
+}
+
+
+.navBar .Menu a:hover{
+    background-color: #0041b9;
+}
+
+.navBar .navBarLogo img{
+    height: 70px;
+}
+
+@media screen and (max-width: 600px) {
+    .navBar .Menu a{
+        display: none;
+    }
+
+    .navBar .Menu img{
+        display: block;
+    }
 }
