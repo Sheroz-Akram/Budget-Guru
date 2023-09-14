@@ -1,28 +1,39 @@
-body{
+body {
     padding: 0px;
     margin: 0px;
     background-color: #01266c;
 }
 
-.navBar{
-    height: 70px;
+.navBar {
     padding: 20px;
     background-color: white;
 }
 
-.navBar .navBarLogo{
-    float: left;
+.navBar .navBarBody {
     height: 70px;
 }
 
-.navBar .Menu{
+.navBar .navBarLogo {
+    float: left;
+    height: 70px;
+    display: flex;
+}
+
+.navBar .navBarLogo h1 {
+    color: #01266c;
+    font-weight: bolder;
+    margin-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.navBar .Menu {
     float: right;
     height: 70px;
     display: flex;
     align-items: center;
 }
 
-.navBar .Menu a{
+.navBar .Menu a {
     text-decoration: none;
     color: white;
     font-size: 15px;
@@ -33,26 +44,59 @@ body{
     margin-left: 10px;
 }
 
-.navBar .Menu img{
+.navBar .Menu img {
     display: none;
     height: 40px;
+    padding: 10px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 50%;
+}
+
+.navBar .Menu img:hover {
+    background-color: rgb(145, 145, 145);
+    ;
 }
 
 
-.navBar .Menu a:hover{
-    background-color: #0041b9;
+.navBar .Menu a:hover {
+    background-color: #505969;
 }
 
-.navBar .navBarLogo img{
+.navBar .navBarLogo img {
     height: 70px;
 }
 
+.navBar .mobileMenu {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(218, 218, 218);
+    display: none;
+}
+
+.navBar .mobileMenu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #01266c;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.navBar .mobileMenu a:hover {
+    background-color: #0041b9;
+}
+
 @media screen and (max-width: 600px) {
-    .navBar .Menu a{
+    .navBar .Menu a {
         display: none;
     }
 
-    .navBar .Menu img{
+    .navBar .Menu img {
         display: block;
     }
+
 }

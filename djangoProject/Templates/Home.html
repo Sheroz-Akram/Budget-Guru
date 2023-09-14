@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="{% static "Logo.png" %}" type="image/x-icon">
     <title>Budget Guru - Home Page</title>
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
@@ -15,17 +17,26 @@
         <div class="navBarBody">
             <div class="navBarLogo">
                 <img src="{% static "Logo.png" %}" alt="" srcset="">
+                <h1>Budget Guru</h1>
             </div>
             <div class="Menu">
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Login</a>
                 <a href="">Sign Up</a>
-                <img src="{% static "UI/MenuIcon.png" %}" alt="Toggle Button" onclick="toggleMenu()" srcset="">
+                <img src="{% static "/UI/MenuIcon.png" %}" alt="Toggle Button" onclick="toggleMenu()" srcset="">
             </div>
+        </div>
+
+        <div id="navBarMobileMenu" class="mobileMenu">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Login</a>
+            <a href="">Sign Up</a>
         </div>
     </section>
 
-    <script src=""></script>
+    <script src="{% static "/Script/HomeScript.js" %}"></script>
 </body>
+
 </html>
