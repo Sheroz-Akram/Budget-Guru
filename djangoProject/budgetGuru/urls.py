@@ -4,5 +4,6 @@ from . import views
 
 # Routing Links to View
 urlpatterns = [
-    path('', view=views.HomePage, name="Home Page"),
+    path('', view=views.MainPage, name="Main Page"),
+    path('Home', view=views.HomePage, name="Home Page"),
 ]
