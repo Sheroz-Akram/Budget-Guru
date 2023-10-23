@@ -48,7 +48,7 @@ body {
     align-items: center;
 }
 
-.navBar .Menu a img{
+.navBar .Menu a img {
     height: 20px;
     width: 20px;
     margin-bottom: 5px;
@@ -100,6 +100,48 @@ body {
     background-color: #0041b9;
 }
 
+.appInfo {
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 30%;
+}
+
+.appInfo h1 {
+    color: white;
+    text-align: center;
+}
+
+.appInfo .actionButton {
+    display: flex;
+    gap: 10px;
+}
+
+.appInfo .actionButton button {
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #01266c;
+}
+
+.appInfo .appLogo {
+    display: flex;
+    justify-content: center;
+}
+
+.appInfo .appLogo img {
+    width: 70%;
+}
+
+.appInfo .actionButton button:hover {
+    color: white;
+    background-color: #505969;
+}
+
 @media screen and (max-width: 620px) {
     .navBar .Menu a {
         display: none;
@@ -107,6 +149,10 @@ body {
 
     .navBar .Menu .displayMobileMenuIcon img {
         display: block;
+    }
+
+    .appInfo {
+        width: 80%;
     }
 
 }
