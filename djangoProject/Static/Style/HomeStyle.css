@@ -157,8 +157,14 @@ body {
 .appFeatures .feature{
     width: 300px;
     margin-top: 20px;
+    border-radius: 20px;
     background-color: #01266c;
     padding: 20px;
+}
+
+.appFeatures .feature .logo{
+    display: flex;
+    justify-content: center;
 }
 
 .appFeatures .feature h1{
