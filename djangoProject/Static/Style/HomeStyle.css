@@ -144,7 +144,7 @@ body {
 }
 
 
-.appFeatures{
+.appFeatures {
 
     background-color: white;
     padding: 30px;
@@ -154,7 +154,7 @@ body {
     column-gap: 20px;
 }
 
-.appFeatures .feature{
+.appFeatures .feature {
     width: 300px;
     margin-top: 20px;
     border-radius: 20px;
@@ -162,22 +162,38 @@ body {
     padding: 20px;
 }
 
-.appFeatures .feature .logo{
+.appFeatures .feature .logo {
     display: flex;
     justify-content: center;
 }
 
-.appFeatures .feature h1{
+.appFeatures .feature h1 {
     margin: 0px;
     margin-bottom: 10px;
     color: white;
     text-align: center;
 }
 
-.appFeatures .feature p{
+.appFeatures .feature p {
     margin: 0px;
     color: white;
     text-align: justify;
+}
+
+.footer .footerMain{
+    padding: 10px;
+}
+
+.footer .footerMain h3 {
+    color: white;
+}
+
+.footer .footerMain .left{
+    float: left;
+}
+
+.footer .footerMain .right{
+    float: right;
 }
 
 
@@ -194,7 +210,7 @@ body {
         width: 80%;
     }
 
-    .appFeatures .feature{
+    .appFeatures .feature {
         width: 80%;
     }
 }
