@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "/Style/HomeStyle.css" %}">
+    <link rel="stylesheet" href="{% static "/Style/AccountStyle.css" %}">
+    <link rel="shortcut icon" href="{% static "Logo.png" %}" type="image/x-icon">
+    <title>Budget Guru - Home Page</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <section class="navBar">
+        <div class="navBarBody">
+            <div class="navBarLogo">
+                <img src="{% static "Logo.png" %}" alt="" srcset="">
+                <h1>Budget Guru</h1>
+            </div>
+            <div class="Menu">
+                <a href="/">
+                    <img src="{% static "UI/Home.png" %}"  alt="" srcset="">
+                    <span>Home</span>
+                </a>
+                <a href="">
+                    <img src="{% static "UI/About.png" %}"  alt="" srcset="">
+                    <span>About</span>
+                </a>
+                <a href="/Account">
+                    <img src="{% static "UI/SignIn.png" %}"  alt="" srcset="">
+                    <span>Log In</span>
+                </a>
+                <a href="/Account">
+                    <img src="{% static "UI/SignUp.png" %}"  alt="" srcset="">
+                    <span>Sign Up</span>
+                </a>
+                <div class="displayMobileMenuIcon">
+                    <img src="{% static "/UI/MenuIcon.png" %}" alt="Toggle Button" onclick="toggleMenu()" srcset="">
+                </div>
+            </div>
+        </div>
+
+        <div id="navBarMobileMenu" class="mobileMenu">
+            <a href="/">Home</a>
+            <a href="">About</a>
+            <a href="/Account">Login</a>
+            <a href="/Account">Sign Up</a>
+        </div>
+    </section>
+
+    <!-- Login and Signup Form -->
+    <div class="accountForm">
+        <div class="wrapper">
+            <div class="title-text">
+              <div class="title login">Login Form</div>
+              <div class="title signup">Signup Form</div>
+            </div>
+            <div class="form-container">
+              <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab"></div>
+              </div>
+              <div class="form-inner">
+                <form action="#" class="login">
+                  <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                    <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="pass-link"><a href="#">Forgot password?</a></div>
+                  <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+                </form>
+                <form action="#" class="signup">
+                  <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                    <input type="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                    <input type="password" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    </div>
+  
+    <!-- Java Scripts Files -->
+    <script src="{% static "/Script/HomeScript.js" %}"></script>
+    <script src="{% static "/Script/AccountScript.js" %}"></script>
+
+    </body>
+</html>

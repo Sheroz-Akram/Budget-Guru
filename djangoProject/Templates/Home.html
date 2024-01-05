@@ -15,39 +15,40 @@
     <!-- Navigation Bar -->
     <section class="navBar">
         <div class="navBarBody">
-            <div class="navBarLogo">
-                <img src="{% static "Logo.png" %}" alt="" srcset="">
-                <h1>Budget Guru</h1>
-            </div>
-            <div class="Menu">
-                <a href="">
-                    <img src="{% static "UI/Home.png" %}"  alt="" srcset="">
-                    <span>Home</span>
-                </a>
-                <a href="">
-                    <img src="{% static "UI/About.png" %}"  alt="" srcset="">
-                    <span>About</span>
-                </a>
-                <a href="">
-                    <img src="{% static "UI/SignIn.png" %}"  alt="" srcset="">
-                    <span>Log In</span>
-                </a>
-                <a href="">
-                    <img src="{% static "UI/SignUp.png" %}"  alt="" srcset="">
-                    <span>Sign Up</span>
-                </a>
-                <div class="displayMobileMenuIcon">
-                    <img src="{% static "/UI/MenuIcon.png" %}" alt="Toggle Button" onclick="toggleMenu()" srcset="">
+            <div class="navBarBody">
+                <div class="navBarLogo">
+                    <img src="{% static "Logo.png" %}" alt="" srcset="">
+                    <h1>Budget Guru</h1>
+                </div>
+                <div class="Menu">
+                    <a href="/">
+                        <img src="{% static "UI/Home.png" %}"  alt="" srcset="">
+                        <span>Home</span>
+                    </a>
+                    <a href="">
+                        <img src="{% static "UI/About.png" %}"  alt="" srcset="">
+                        <span>About</span>
+                    </a>
+                    <a href="/Account">
+                        <img src="{% static "UI/SignIn.png" %}"  alt="" srcset="">
+                        <span>Log In</span>
+                    </a>
+                    <a href="/Account">
+                        <img src="{% static "UI/SignUp.png" %}"  alt="" srcset="">
+                        <span>Sign Up</span>
+                    </a>
+                    <div class="displayMobileMenuIcon">
+                        <img src="{% static "/UI/MenuIcon.png" %}" alt="Toggle Button" onclick="toggleMenu()" srcset="">
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div id="navBarMobileMenu" class="mobileMenu">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Login</a>
-            <a href="">Sign Up</a>
-        </div>
+    
+            <div id="navBarMobileMenu" class="mobileMenu">
+                <a href="/">Home</a>
+                <a href="">About</a>
+                <a href="/Account">Login</a>
+                <a href="/Account">Sign Up</a>
+            </div>
     </section>
 
     <!-- Simple Information about Web Application  -->

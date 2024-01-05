@@ -8,3 +8,7 @@ def MainPage(request):
 # Home Page
 def HomePage(request):
     return render(request=request, template_name="Home.html")
+
+# Account Page (Login/Registration)
+def AccountPage(request):
+    return render(request=request, template_name="Account.html")
