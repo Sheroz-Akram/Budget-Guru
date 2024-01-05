@@ -17,6 +17,11 @@ Easily track your daily expenses with just a few taps. The app categorizes trans
 4. **Goal-Oriented Savings**:
 Define and visualize your financial goals effortlessly. Whether it's saving for a vacation, buying a new gadget, or paying off a debt, Budget Guru helps you stay focused and motivated.
 
+## Screenshots
+
+### Home Page
+<img src="/Site Images/HomePage.png" alt="Budget Guru Home Page">
+
 ## How to Run
 
 To the Django Project just go the the "djangoProject" folder in terminal and run the following command in the terminal.
