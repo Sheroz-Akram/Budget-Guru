@@ -8,5 +8,7 @@ urlpatterns = [
     path('Home', view=views.HomePage, name="Home Page"),
     path("Account", view=views.AccountPage, name="Account Page"),
     path("Registor", view=views.registrationAPI, name="Registor User"),
-    path("Login", view=views.loginAPI, name="Login User")
+    path("Login", view=views.loginAPI, name="Login User"),
+    path("Dashboard", view=views.DashboardPage, name="Dashboard Page"),
+    path("ProfileSettings", view=views.ProfileSettings, name="Profile Settings")
 ]

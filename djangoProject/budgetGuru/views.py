@@ -20,3 +20,11 @@ def registrationAPI(request):
 # Login API (login a already registored user from the database)
 def loginAPI(request):
     return HttpResponse("Got a Request. Okay")
+
+# Dashboard Page that is Shown to the User
+def DashboardPage(request):
+    return render(request=request, template_name="Dashboard.html")
+
+# Page to Adjust Acccount Settings
+def ProfileSettings(request):
+    return render(request=request, template_name="ProfileSettings.html")
