@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import budgetGuru.urls as BudgetGuruAppUrls
+from budgetGuru.models import *
+
+admin.site.register(AppUser)
 
 urlpatterns = [
     path('guru/', admin.site.urls),

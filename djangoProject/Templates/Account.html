@@ -54,6 +54,15 @@
     <!-- Login and Signup Form -->
     <div class="accountForm">
         <div class="wrapper">
+            {% if status == 'error' %}
+              <div id="errorMessage" style="display: block !important" class="errorMessage">
+                <p>{{ message }}</p>
+              </div>
+            {% else %}
+              <div id="successMessage" style="display: block !important" class="successMessage">
+                <p>{{ message }}</p>
+              </div>
+            {% endif %}
             <div id="errorMessage" class="errorMessage">
               <p>Here is the error message</p>
             </div>
@@ -88,10 +97,10 @@
                 <form action="/Registor" onsubmit="return registorUser()" method="post" class="signup">
                   {% csrf_token %}
                   <div class="field">
-                    <input type="text" id="registorEmail" placeholder="Email Address" required>
+                    <input type="text" id="registorEmail" name="email" placeholder="Email Address" required>
                   </div>
                   <div class="field">
-                    <input type="password" id="registorPassword" placeholder="Password" required>
+                    <input type="password" id="registorPassword" name="password" placeholder="Password" required>
                   </div>
                   <div class="field">
                     <input type="password" id="registorConfirmPassword" placeholder="Confirm password" required>

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
+from .models import *
+from .Modules.helper import *
 
 # Main Page
 def MainPage(request):
@@ -15,7 +17,47 @@ def AccountPage(request):
 
 # Registration API (registor a new User in the database)
 def registrationAPI(request):
-    return HttpResponse("Got a Request. Okay")
+
+    
+    try:
+        # Get the Information of the User
+        signup_email_address = request.POST['email']
+        signup_password = request.POST['password']
+
+        try:
+
+            # Create a unique private key
+            privatekey = generateRandomeString(100)
+
+            # Check if the user already exists or not
+            newUser = AppUser(
+                private_key=privatekey,
+                email_address=signup_email_address,
+                password=signup_password,
+            )
+
+            # Store the Newly created User
+            newUser.save()
+
+            # Return the User to the Registration Page
+            return render(request=request, template_name="Account.html", context={
+                "status": "success",
+                "message":"Account is create successfully"
+            })
+
+        # User Already exists with same email address
+        except Exception as e:
+            return render(request=request, template_name="Account.html", context={
+                "status": "error",
+                "message":"Account with same email address already exists"
+            })
+
+    # An Error in the Request
+    except Exception as e:
+        return render(request=request, template_name="Account.html", context={
+                "status": "error",
+                "message":"An invalid request by the user"
+            })
 
 # Login API (login a already registored user from the database)
 def loginAPI(request):
