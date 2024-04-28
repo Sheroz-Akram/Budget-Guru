@@ -58,7 +58,7 @@
               <div id="errorMessage" style="display: block !important" class="errorMessage">
                 <p>{{ message }}</p>
               </div>
-            {% else %}
+            {% elif status == 'success' %}
               <div id="successMessage" style="display: block !important" class="successMessage">
                 <p>{{ message }}</p>
               </div>
@@ -82,10 +82,10 @@
                 <form action="/Login" onsubmit="return loginUser()" method="post"  class="login">
                   {% csrf_token %}
                   <div class="field">
-                    <input type="text" id="loginEmail" placeholder="Email Address" required>
+                    <input type="text" id="loginEmail" name="loginEmail" placeholder="Email Address" required>
                   </div>
                   <div class="field">
-                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Password" required>
                   </div>
                   <div class="pass-link"><a href="#">Forgot password?</a></div>
                   <div class="field btn">
